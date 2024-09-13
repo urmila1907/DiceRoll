@@ -1,0 +1,29 @@
+.main-box{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.dice-box{
+    display: flex;
+    gap: 2rem;
+}
+
+.die1, .die2{
+    color: rgb(25, 145, 145);
+    font-size: 3rem;
+}
+
+.dice-btn{
+    background-color: rgb(227, 236, 201);
+    border-radius: 10%;
+    width: 7rem;
+}
+
+.dice-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
