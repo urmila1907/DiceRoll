@@ -20,13 +20,19 @@ function RollDice(){
     function roll(){
         isClicked(true);
         const btns = document.getElementsByClassName('dice-btn');
+        const die1 = document.getElementById('die1');
+        const die2 = document.getElementById('die2');
         const btn = btns[0];
+        die1.style.animation = 'tilt-horizontal-shaking 1s';
+        die2.style.animation = 'tilt-horizontal-shaking 1s';
         btn.disabled = true;
         setTimeout(()=>{
             isClicked(false);
             setClass1(arr[rm1]);
             setClass2(arr[rm2]);
             btn.disabled = false;
+            die1.style.animation = '';
+            die2.style.animation = '';
         },1000);
     }
 
@@ -34,8 +40,8 @@ function RollDice(){
         <>
         <div className="main-box">
             <div className="dice-box">
-                <i class={`${class1} die1`}></i>
-                <i class={`${class2} die2`} ></i>
+                <i class={class1} id="die1"></i>
+                <i class={class2} id="die2"></i>
             </div>
             <div className="btn-box">
                 <button className="dice-btn" onClick={roll}>{clicked===false? <p>Roll the dice!</p> : <p>Rolling!</p>}</button>

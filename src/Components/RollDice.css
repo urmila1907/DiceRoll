@@ -12,7 +12,7 @@
     gap: 2rem;
 }
 
-.die1, .die2{
+#die1, #die2{
     color: rgb(25, 145, 145);
     font-size: 3rem;
 }
@@ -26,4 +26,12 @@
 .dice-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+@keyframes tilt-horizontal-shaking {
+    0% { transform: rotate(0deg) translateX(0); }
+    25% { transform: rotate(5deg) translateX(5px); }
+    50% { transform: rotate(0deg) translateX(-5px); }
+    75% { transform: rotate(-5deg) translateX(5px); }
+    100% { transform: rotate(0deg) translateX(0); }
 }
