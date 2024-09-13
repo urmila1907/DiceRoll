@@ -1,10 +1,33 @@
-.main-box{
-    position: absolute;
-    top: 45%;
-    left: 45%;
+#msg{
     display: flex;
-    flex-flow: column;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: rgb(212, 49, 76);
+    visibility: hidden;
+}
+
+.big-box{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.die-box{
+    display: flex;
+    gap: 10rem;
+}
+
+.dice-box-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .dice-box{
@@ -12,7 +35,7 @@
     gap: 2rem;
 }
 
-#die1, #die2{
+#die1, #die2, #die3, #die4{
     color: rgb(25, 145, 145);
     font-size: 3rem;
 }
@@ -21,6 +44,8 @@
     background-color: rgb(227, 236, 201);
     border-radius: 10%;
     width: 7rem;
+    position: relative;
+    left: 30%;
 }
 
 .dice-btn:disabled {
